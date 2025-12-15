@@ -106,7 +106,7 @@ export default function TiersSection({ title, subtitle, levels }: TiersProps) {
             className="mt-12 bg-gradient-to-r from-yellow-400 to-yellow-500 dark:from-yellow-500 dark:to-yellow-60 rounded-xl p-8 relative overflow-visible max-w-4xl mx-auto"
           >
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs font-bold px-4 py-1 rounded-full">
-              ВЫДЕЛЕННО
+              VIP
             </div>
             
             <div className="text-center space-y-4">
