@@ -14,7 +14,7 @@ interface TiersProps {
 }
 
 export default function TiersSection({ title, subtitle, levels }: TiersProps) {
-  const popularTiers = ['member', 'strategist']; // Уровни 300-500 BYN и выше
+  const popularTiers = ['visionary']; // Уровень, который будет выделен
   
   return (
     <section id="tiers" className="py-20 bg-gray-50 dark:bg-gray-800">
@@ -33,10 +33,10 @@ export default function TiersSection({ title, subtitle, levels }: TiersProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {levels.map((level, index) => {
             const isPopular = popularTiers.includes(level.id);
-            const isStrategist = level.id === 'strategist';
+            const isVisionary = level.id === 'visionary';
             
-            // Пропускаем отображение карточки strategist в основной сетке
-            if (isStrategist) return null;
+            // Пропускаем отображение карточки visionary в основной сетке
+            if (isVisionary) return null;
             
             return (
               <motion.div
@@ -96,25 +96,25 @@ export default function TiersSection({ title, subtitle, levels }: TiersProps) {
           })}
         </div>
         
-        {/* Карточка Strategist отдельно */}
-        {levels.find(level => level.id === 'strategist') && (
+        {/* Карточка Visionary отдельно */}
+        {levels.find(level => level.id === 'visionary') && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 bg-gradient-to-r from-yellow-400 to-yellow-500 dark:from-yellow-500 dark:to-yellow-600 rounded-xl p-8 relative overflow-visible max-w-4xl mx-auto"
+            className="mt-12 bg-gradient-to-r from-yellow-400 to-yellow-500 dark:from-yellow-500 dark:to-yellow-60 rounded-xl p-8 relative overflow-visible max-w-4xl mx-auto"
           >
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs font-bold px-4 py-1 rounded-full">
-              VIP
+              ВЫДЕЛЕННО
             </div>
             
             <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-black dark:text-white">{levels.find(level => level.id === 'strategist')?.name}</h3>
+              <h3 className="text-2xl font-bold text-black dark:text-white">{levels.find(level => level.id === 'visionary')?.name}</h3>
               
-              <div className="text-4xl font-bold text-black dark:text-white">{levels.find(level => level.id === 'strategist')?.price}</div>
+              <div className="text-4xl font-bold text-black dark:text-white">{levels.find(level => level.id === 'visionary')?.price}</div>
               
-              <p className="text-lg text-black dark:text-white">{levels.find(level => level.id === 'strategist')?.description}</p>
+              <p className="text-lg text-black dark:text-white">{levels.find(level => level.id === 'visionary')?.description}</p>
               
               <motion.button
                 whileHover={{ scale: 1.05 }}
