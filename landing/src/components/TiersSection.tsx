@@ -68,19 +68,7 @@ export default function TiersSection({ title, subtitle, levels }: TiersProps) {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
-                      // Временная реализация - модальное окно или скролл к контактам
-                      const modal = document.createElement('div');
-                      modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-                      modal.innerHTML = `
-                        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-md w-full">
-                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Программа запускается в ближайшее время</h3>
-                          <p className="text-gray-700 dark:text-gray-300 mb-6">Оставьте контакт, чтобы получить информацию о запуске</p>
-                          <button onclick="this.closest('div').remove()" class="w-full bg-black dark:bg-white text-white dark:text-black font-semibold py-2 px-4 rounded-lg">
-                            Закрыть
-                          </button>
-                        </div>
-                      `;
-                      document.body.appendChild(modal);
+                      window.open('https://t.me/n_temchenko', '_blank');
                     }}
                     className={`w-full py-3 px-4 rounded-lg font-semibold ${
                       isPopular
@@ -120,19 +108,7 @@ export default function TiersSection({ title, subtitle, levels }: TiersProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
-                  // Временная реализация - модальное окно или скролл контактам
-                  const modal = document.createElement('div');
-                  modal.className = 'fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4';
-                  modal.innerHTML = `
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-md w-full">
-                      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Программа запускается в ближайшее время</h3>
-                      <p class="text-gray-700 dark:text-gray-300 mb-6">Оставьте контакт, чтобы получить информацию о запуске</p>
-                      <button onclick="this.closest('div').remove()" class="w-full bg-black dark:bg-white text-white dark:text-black font-semibold py-2 px-4 rounded-lg">
-                        Закрыть
-                      </button>
-                    </div>
-                  `;
-                  document.body.appendChild(modal);
+                  window.open('https://t.me/n_temchenko', '_blank');
                 }}
                 className="w-full bg-black text-white font-semibold py-4 px-6 rounded-lg text-lg"
               >
